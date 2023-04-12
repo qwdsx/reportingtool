@@ -26,6 +26,7 @@ body {
 
 #navbar a:hover {
     background-color: #334155;
+    transition: background-color .2s;
 }
 
 #navbar a {
