@@ -43,7 +43,7 @@ body {
 }
 
 #group-index {
-    width: 30%;
+    width: 15%;
     height: 600px;
     background-color: red;
     margin: 10px;
@@ -86,7 +86,7 @@ body {
 }
 
 #table-index {
-    width: 70%;
+    width: 85%;
     height: 600px;
     background-color: blue;
     margin: 10px;
@@ -156,14 +156,14 @@ body {
 }
 
 #group-archive {
-    width: 30%;
+    width: 15%;
     height: 600px;
     background-color: yellow;
     margin: 10px;
 }
 
 #table-archive {
-    width: 70%;
+    width: 85%;
     height: 600px;
     background-color: green;
     margin: 10px;
