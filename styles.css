@@ -20,10 +20,6 @@ body {
     text-decoration: none;
 }
 
-.active {
-    background-color: #475569;
-}
-
 #navbar a:hover {
     background-color: #334155;
     transition: background-color .2s;
@@ -36,6 +32,11 @@ body {
     padding: 10px 10px;
     font-size: 20px;
     display: block;
+}
+
+.active {
+    background-color: #475569;
+    pointer-events: none;
 }
 
 #main-index {
