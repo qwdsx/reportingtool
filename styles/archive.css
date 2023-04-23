@@ -1,0 +1,116 @@
+#main-archive {
+    display: flex;
+}
+
+#group-archive {
+    width: 15%;
+    height: 850px;
+    background-color: yellow;
+    margin: 10px;
+    overflow: hidden;
+}
+
+#table-archive {
+    width: 85%;
+    height: 850px;
+    background-color: green;
+    margin: 10px;
+}
+
+#header-group-archive {
+    width: 100%;
+    height: 10%;
+    background-color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#group-list-archive {
+    width: 100%;
+    height: 90%;
+    font-size: 20px;
+    list-style-type: none;
+    padding: 0;
+    overflow: scroll;
+}
+
+#group-list-archive li {
+    padding: 8px 16px;
+    overflow: hidden;
+}
+
+#group-list-archive li:hover {
+    background-color: #f87171;
+}
+
+#header-table-archive {
+    width: 100%;
+    height: 10%;
+    background-color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#member-archive {
+    display: flex;
+    overflow: hidden;
+    width: 20%;
+}
+
+
+#member-list-archive {
+    width: 100%;
+    height: 90%;
+    font-size: 20px;
+    list-style-type: none;
+    padding: 0;
+    overflow: scroll;
+    background-color: blanchedalmond;
+}
+
+#member-list-archive li {
+    padding: 8px 16px;
+    overflow: hidden;
+}
+
+#member-list-archive li:hover {
+    background-color: #818cf8;
+}
+
+#table-main-archive {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#month-archive {
+    background-color: beige;
+    width: 80%;
+    height: 90%;
+}
+
+#month-table {
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: chocolate;
+}
+
+.month-block {
+    margin: 10px;
+    background-color: aqua;
+}
+
+.month-block:nth-child(even) {
+    background-color: darkseagreen;
+}
+
+#member-total {
+    width: 100%;
+    height: 15%;
+    background-color: crimson;
+}
