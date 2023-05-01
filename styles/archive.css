@@ -5,22 +5,24 @@
 #group-archive {
     width: 15%;
     height: 850px;
-    background-color: yellow;
+    background-color: #94a3b8;
     margin: 10px;
     overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 }
 
 #table-archive {
     width: 85%;
     height: 850px;
-    background-color: green;
+    background-color: #64748b;
     margin: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 }
 
 #header-group-archive {
     width: 100%;
-    height: 10%;
-    background-color: #e2e8f0;
+    height: 60px;
+    background-color: #cbd5e1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +30,7 @@
 
 #group-list-archive {
     width: 100%;
-    height: 90%;
+    height: 790px;
     font-size: 20px;
     list-style-type: none;
     padding: 0;
@@ -38,16 +40,18 @@
 #group-list-archive li {
     padding: 8px 16px;
     overflow: hidden;
+    cursor: pointer;
+    text-align: center;
 }
 
 #group-list-archive li:hover {
-    background-color: #f87171;
+    background-color: #cbd5e1;
 }
 
 #header-table-archive {
     width: 100%;
-    height: 10%;
-    background-color: #e2e8f0;
+    height: 60px;
+    background-color: #cbd5e1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,62 +60,147 @@
 #member-archive {
     display: flex;
     overflow: hidden;
-    width: 40%;
+    width: 20%;
 }
-
 
 #member-list-archive {
     width: 100%;
-    height: 90%;
+    height: 790px;
     font-size: 20px;
     list-style-type: none;
     padding: 0;
     overflow: scroll;
-    background-color: blanchedalmond;
+    background-color: #94a3b8;
 }
 
 #member-list-archive li {
     padding: 8px 16px;
     overflow: hidden;
+    cursor: pointer;
+    text-align: center;
 }
 
 #member-list-archive li:hover {
-    background-color: #818cf8;
+    background-color: #cbd5e1;
 }
 
 #table-main-archive {
-    display: flex;
+    display: none;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
 #month-archive {
-    background-color: beige;
+    background-color: #64748b;
     width: 80%;
     height: 90%;
+    display: none;
 }
 
 #month-table {
-    width: auto;
-    height: 85%;
+    height: 730px;
     display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
-    background-color: chocolate;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
 .month-block {
+    background-color: #334155;
+    aspect-ratio: 4/3;
+    border: 1px solid black;
     margin: 10px;
-    background-color: aqua;
-    aspect-ratio: 1;
-}
-
-.month-block:nth-child(even) {
-    background-color: darkseagreen;
+    cursor: pointer;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
 }
 
 #member-total {
     width: 100%;
-    height: 15%;
-    background-color: crimson;
+    height: 60px;
+    background-color: #cbd5e1;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.popup-content {
+    background-color: #818cf8;
+    margin: auto;
+    width: 40%;
+    height: 700px;
+    margin-top: 50px;
+}
+
+#popup-content-header {
+    background-color: #cbd5e1;
+}
+
+#popup-close {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.day-of-week, .date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-of-week {
+    text-align: center;
+    font-size: 25px;
+}
+
+.date-grid button {
+    position: relative;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 35px;
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+.no-practice {
+    border: 0;
+    background: transparent;
+}
+
+.practice-day {
+    background: transparent;
+    border: 1px solid black;
+}
+
+.attended {
+    background: rgba(0, 0, 0, .2);
+    border: 1px solid black;
+}
+
+#popup-tutorial {
+    margin-left: 0px;
+    margin-top: 50px;
+    display: flex;
+}
+
+#popup-tutorial button {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: white;
 }
