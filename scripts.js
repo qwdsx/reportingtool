@@ -4,6 +4,8 @@ const memberList = document.getElementById('member-list-archive').childNodes;
 const groupList = document.getElementById('group-list-archive').childNodes;
 let member = "";
 let group = "";
+const cancel = document.getElementById('cancel');
+const save = document.getElementById('save');
 
 memberList.forEach((item) => {
     item.addEventListener('click', () => {
@@ -35,4 +37,24 @@ window.onclick = (e) => {
 
 document.getElementById('popup-close').onclick = () => {
     popup.style.display = "none";
+}
+
+fetch("test.json")
+.then(function(response) {
+    return response.json();
+})
+.then(function(members) {
+    appendData(members);
+})
+.catch(function(err) {
+    console.log('error: ' + err);
+});
+
+function appendData(members) {
+    let placeholder = document.getElementById("data-output");
+    for(let i = 0; i < members.length; i++) {
+        let div = document.createElement("div");
+        div.innerHTML = 'Name: ' + members[i].name;
+        placeholder.appendChild(div);
+    }
 }

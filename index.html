@@ -50,7 +50,6 @@
                 
                 <div id="member-list-index">
                     <table id="checkbox-table" class="table-checkbox">
-                        <thead>
                             <tr>
                                 <th>Member</th>
                                 <th>Mon</th>
@@ -61,8 +60,7 @@
                                 <th>Sat</th>
                                 <th>Sun</th>
                             </tr>
-                        </thead>
-                        <tbody>
+                        <tbody id="data-output">
                             <tr>
                                 <td>Member 1</td>
                                 <td><input type="checkbox" value="mon"></td>
@@ -163,13 +161,14 @@
                                 <td><input type="checkbox" value="sat"></td>
                                 <td><input type="checkbox" value="sun"></td>
                             </tr>
+
                         </tbody>
     
                     </table>
-                    <!-- <div id="buttons-row-index" class="buttons">
-                        <button>Cancel</button>
-                        <button>Save</button>
-                    </div> -->
+                    <div id="buttons-row-index" class="buttons">
+                        <button id="cancel">Cancel</button>
+                        <button id="save">Save</button>
+                    </div>
                 </div>
             </div>
         </div>
