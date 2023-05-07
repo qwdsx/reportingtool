@@ -9,14 +9,25 @@ let group = "";
 const cancel = document.getElementById('cancel');
 const save = document.getElementById('save');
 
+document.addEventListener( "DOMContentLoaded", fetchData, false );
+
 async function fetchData() {
-    const res = await fetch("https://raw.githubusercontent.com/qwdsx/reportingtool/main/groups.json");
+    const res = await fetch("https://raw.githubusercontent.com/qwdsx/reportingtool/main/test.json");
     const data = await res.json();
     console.log(data);
+    appendData(data);
 }
 
 fetchData();
 
+function appendData(data) {
+    var table = document.getElementById('data-output');
+    for (let i = 0; i < data.length; i++) {
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + data[i].name + '</td>';
+        table.appendChild(tr);
+    };
+}
 memberListArchive.forEach((item) => {
     item.addEventListener('click', () => {
         member = item.innerHTML;
@@ -49,22 +60,15 @@ document.getElementById('popup-close').onclick = () => {
     popup.style.display = "none";
 }
 
-fetch("test.json")
-.then(function(response) {
-    return response.json();
-})
-.then(function(members) {
-    appendData(members);
-})
-.catch(function(err) {
-    console.log('error: ' + err);
-});
+// fetch("test.json")
+// .then(function(response) {
+//     return response.json();
+// })
+// .then(function(members) {
+//     appendData(members);
+// })
+// .catch(function(err) {
+//     console.log('error: ' + err);
+// });
 
-function appendData(members) {
-    let placeholder = document.getElementById("data-output");
-    for(let i = 0; i < members.length; i++) {
-        let div = document.createElement("div");
-        div.innerHTML = 'Name: ' + members[i].name;
-        placeholder.appendChild(div);
-    }
-}
+

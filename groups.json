@@ -2,19 +2,18 @@
     "groups": {
         "group1": [
             {
-                "member1": {
                     "name": "mark"
-                }
+                
             },
             {
-                "member2": {
+               
                     "name": "jack"
-                }
+                
             },
             {
-                "member3": {
+               
                     "name": "john"
-                }
+                
             }
         ],
         "group2": [
