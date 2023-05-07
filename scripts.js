@@ -1,7 +1,9 @@
 
 const popup = document.getElementById('popup');
-const memberList = document.getElementById('member-list-archive').childNodes;
-const groupList = document.getElementById('group-list-archive').childNodes;
+const memberListArchive = document.getElementById('member-list-archive').childNodes;
+const groupListArchive = document.getElementById('group-list-archive').childNodes;
+const memberListIndex = document.getElementById('member-list-archive').childNodes;
+const groupListIndex = document.getElementById('group-list-archive').childNodes;
 let member = "";
 let group = "";
 const cancel = document.getElementById('cancel');
@@ -15,14 +17,14 @@ async function fetchData() {
 
 fetchData();
 
-memberList.forEach((item) => {
+memberListArchive.forEach((item) => {
     item.addEventListener('click', () => {
         member = item.innerHTML;
         document.getElementById('month-archive').style.display = "block";
     })
 })
 
-groupList.forEach((item) => {
+groupListArchive.forEach((item) => {
     item.addEventListener('click', () => {
         document.getElementById('header-table-archive').getElementsByTagName('h1')[0].innerHTML = item.innerHTML;
         document.getElementById('table-main-archive').style.display = "flex";
