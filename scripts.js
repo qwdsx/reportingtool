@@ -7,6 +7,14 @@ let group = "";
 const cancel = document.getElementById('cancel');
 const save = document.getElementById('save');
 
+async function fetchData() {
+    const res = await fetch("https://raw.githubusercontent.com/qwdsx/reportingtool/main/groups.json");
+    const data = await res.json();
+    console.log(data);
+}
+
+fetchData();
+
 memberList.forEach((item) => {
     item.addEventListener('click', () => {
         member = item.innerHTML;
