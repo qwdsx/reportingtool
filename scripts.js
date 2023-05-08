@@ -9,25 +9,35 @@ let group = "";
 const cancel = document.getElementById('cancel');
 const save = document.getElementById('save');
 
-document.addEventListener( "DOMContentLoaded", fetchData, false );
+//document.addEventListener( "DOMContentLoaded", fetchData, false );
 
-async function fetchData() {
+async function fetchMemberData() {
     const res = await fetch("https://raw.githubusercontent.com/qwdsx/reportingtool/main/test.json");
-    const data = await res.json();
-    console.log(data);
-    appendData(data);
+    const memberData = await res.json();
+    console.log(memberData);
+    appendMemberDataToArchive(memberData);
 }
 
-fetchData();
+fetchMemberData();
 
-function appendData(data) {
-    var table = document.getElementById('data-output');
-    for (let i = 0; i < data.length; i++) {
-        var tr = document.createElement('tr');
-        tr.innerHTML = '<td>' + data[i].name + '</td>';
-        table.appendChild(tr);
+function appendMemberDataToArchive(memberData) {
+    var list = document.getElementById('member-list-archive');
+    for (let i = 0; i < memberData.length; i++) {
+        var li = document.createElement('li');
+        li.innerHTML = memberData[i].name;
+        list.appendChild(li);
     };
-}
+};
+
+function appendMemberDataToIndex(memberData) {
+    var table = document.getElementById('data-output');
+    for (let i = 0; i < memberData.length; i++) {
+        //loop to go through memberdata and append members to table
+        //checkboxes could also be set here?
+        
+    };
+};
+
 memberListArchive.forEach((item) => {
     item.addEventListener('click', () => {
         member = item.innerHTML;
