@@ -4,13 +4,22 @@
             "name": "Football group",
             "members": [
                 {
-                    "name": "mark"
+                    "name": "Mark Jones"
                 },
                 {
-                    "name": "jack"
+                    "name": "Jack Smith"
                 },
                 {
-                    "name": "john"
+                    "name": "John Watson"
+                },
+                {
+                    "name": "Kate Johnston"
+                },
+                {
+                    "name": "Claire Price"
+                },
+                {
+                    "name": "James Connor"
                 }
             ]
         },
@@ -18,13 +27,114 @@
             "name": "Baseball group",
             "members": [
                 {
-                    "name": "stacy"
+                    "name": "Stacy Park"
                 },
                 {
-                    "name": "lisa"
+                    "name": "Lisa Simmons"
                 },
                 {
-                    "name": "alice"
+                    "name": "Alice Walker"
+                },
+                {
+                    "name": "Peter Cross"
+                },
+                {
+                    "name": "Jimmy Portman"
+                },
+                {
+                    "name": "Michael Stone"
+                }
+            ]
+        },
+        {
+            "name": "Ice hockey group",
+            "members": [
+                {
+                    "name": "Catherine Johnson"
+                },
+                {
+                    "name": "Kris Branthe"
+                },
+                {
+                    "name": "Hassan Chang"
+                },
+                {
+                    "name": "Ben Cramm"
+                },
+                {
+                    "name": "Mark Bright"
+                },
+                {
+                    "name": "Brian Jones"
+                }
+            ]
+        },
+        {
+            "name": "Figure skating group",
+            "members": [
+                {
+                    "name": "Mary Johnson"
+                },
+                {
+                    "name": "Kris Graham"
+                },
+                {
+                    "name": "Xi Chang"
+                },
+                {
+                    "name": "Ben Barach"
+                },
+                {
+                    "name": "Mark Smith"
+                },
+                {
+                    "name": "John Jones"
+                }
+            ]
+        },
+        {
+            "name": "Tennis group",
+            "members": [
+                {
+                    "name": "Margaret Johnson"
+                },
+                {
+                    "name": "Christian Branthe"
+                },
+                {
+                    "name": "Brittany Chang"
+                },
+                {
+                    "name": "Janet Cramm"
+                },
+                {
+                    "name": "Brian Bright"
+                },
+                {
+                    "name": "Zach Jones"
+                }
+            ]
+        },
+        {
+            "name": "Floorball group",
+            "members": [
+                {
+                    "name": "Jeff Mrazek"
+                },
+                {
+                    "name": "Jim Rock"
+                },
+                {
+                    "name": "Laura Kent"
+                },
+                {
+                    "name": "Katie Clark"
+                },
+                {
+                    "name": "Jordan Cross"
+                },
+                {
+                    "name": "Brent Crind"
                 }
             ]
         }

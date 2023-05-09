@@ -63,15 +63,6 @@ function appendDataToArchive(data) {
     
 }
 
-function appendMemberDataToIndex(memberData) {
-    var table = document.getElementById('data-output');
-    for (let i = 0; i < memberData.length; i++) {
-        //loop to go through memberdata and append members to table
-        //checkboxes could also be set here?
-        
-    };
-};
-
 document.querySelectorAll('.month-block').forEach((item) => {
     item.addEventListener('click', () => {
         popup.style.display = "block";
