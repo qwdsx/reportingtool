@@ -1,9 +1,5 @@
 
 const popup = document.getElementById('popup');
-const memberListArchive = document.getElementById('member-list-archive').childNodes;
-const groupListArchive = document.getElementById('group-list-archive').childNodes;
-const memberListIndex = document.getElementById('member-list-archive').childNodes;
-const groupListIndex = document.getElementById('group-list-archive').childNodes;
 let member = "";
 let group = "";
 const cancel = document.getElementById('cancel');
@@ -12,22 +8,62 @@ const save = document.getElementById('save');
 //document.addEventListener( "DOMContentLoaded", fetchData, false );
 
 async function fetchMemberData() {
-    const res = await fetch("https://raw.githubusercontent.com/qwdsx/reportingtool/main/test.json");
+    const res = await fetch("https://raw.githubusercontent.com/qwdsx/reportingtool/main/groups.json");
     const memberData = await res.json();
-    console.log(memberData);
     appendMemberDataToArchive(memberData);
+    appendDataToArchive(memberData);
 }
 
 fetchMemberData();
 
 function appendMemberDataToArchive(memberData) {
-    var list = document.getElementById('member-list-archive');
-    for (let i = 0; i < memberData.length; i++) {
-        var li = document.createElement('li');
-        li.innerHTML = memberData[i].name;
-        list.appendChild(li);
+    let list = document.getElementById('member-list-archive');
+    let li = document.createElement('li');
+    for (let i = 0; i < memberData.groups.length; i++) {
+        for (let j = 0; j < memberData.groups[i].members.length; j++) {
+            li.innerHTML = memberData.groups[i].members[j].name;
+            list.appendChild(li);
+        }
     };
 };
+
+function appendDataToArchive(data) {
+    let list = document.getElementById('group-list-archive');
+    for (let i = 0; i < data.groups.length; i++) {
+        let li = document.createElement('li');
+        li.innerHTML = data.groups[i].name;
+        list.appendChild(li);
+    }
+
+    list.childNodes.forEach((item) => {
+        item.addEventListener('click', () => {
+            let list2 = document.getElementById('member-list-archive');
+            
+            while (list2.firstChild) {
+                list2.removeChild(list2.firstChild);
+            }
+
+            const findCorrectGroup = data.groups.find(e => e.name === item.innerHTML);
+
+            for (let i = 0; i < findCorrectGroup.members.length; i++) {
+                let li = document.createElement('li');
+                li.innerHTML = findCorrectGroup.members[i].name;
+                list2.appendChild(li);
+            }
+
+            list2.childNodes.forEach((item) => {
+                item.addEventListener('click', () => {
+                    member = item.innerHTML;
+                    document.getElementById('month-archive').style.display = "block";
+                })
+            })
+
+            document.getElementById('header-table-archive').getElementsByTagName('h1')[0].innerHTML = item.innerHTML;
+            document.getElementById('table-main-archive').style.display = "flex";
+        })
+    })
+    
+}
 
 function appendMemberDataToIndex(memberData) {
     var table = document.getElementById('data-output');
@@ -37,20 +73,6 @@ function appendMemberDataToIndex(memberData) {
         
     };
 };
-
-memberListArchive.forEach((item) => {
-    item.addEventListener('click', () => {
-        member = item.innerHTML;
-        document.getElementById('month-archive').style.display = "block";
-    })
-})
-
-groupListArchive.forEach((item) => {
-    item.addEventListener('click', () => {
-        document.getElementById('header-table-archive').getElementsByTagName('h1')[0].innerHTML = item.innerHTML;
-        document.getElementById('table-main-archive').style.display = "flex";
-    })
-})
 
 document.querySelectorAll('.month-block').forEach((item) => {
     item.addEventListener('click', () => {
