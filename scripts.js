@@ -2,8 +2,6 @@
 const popup = document.getElementById('popup');
 let member = "";
 let group = "";
-const cancel = document.getElementById('cancel');
-const save = document.getElementById('save');
 
 //document.addEventListener( "DOMContentLoaded", fetchData, false );
 
@@ -82,25 +80,20 @@ document.querySelectorAll('.month-block').forEach((item) => {
     })
 })
 
+document.getElementById('popup-close').onclick = () => {
+    popup.style.display = "none";
+}
+
 window.onclick = (e) => {
     if (e.target == popup) {
         popup.style.display = "none";
     }
 }
 
-document.getElementById('popup-close').onclick = () => {
-    popup.style.display = "none";
+document.getElementById('save').onclick = () => {
+    popupSave.style.display = "block";
 }
 
-// fetch("test.json")
-// .then(function(response) {
-//     return response.json();
-// })
-// .then(function(members) {
-//     appendData(members);
-// })
-// .catch(function(err) {
-//     console.log('error: ' + err);
-// });
-
-
+document.getElementById('cancel').onclick = () => {
+    popupCancel.style.display = "block";
+}

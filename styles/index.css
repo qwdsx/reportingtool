@@ -1,0 +1,234 @@
+
+#main-index {
+    display: flex;
+}
+
+#group-index {
+    width: 15%;
+    height: 850px;
+    background-color: #94a3b8;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+#header-group-index {
+    width: 100%;
+    height: 60px;
+    background-color: #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#group-list-index {
+    width: 100%;
+    height: 790px;
+    font-size: 20px;
+    list-style-type: none;
+    padding: 0;
+    overflow: scroll;
+}
+
+#group-list-index li {
+    padding: 8px 16px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+#group-list-index li:hover {
+    background-color: #cbd5e1;
+    transition: background-color .5s;
+}
+
+#table-index {
+    width: 85%;
+    height: 850px;
+    background-color: #64748b;
+    margin: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.tableheader {
+    width: 100%;
+    height: 30px;
+    background-color: #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+#header2-table-index {
+    width: 100%;
+    height: 30px;
+    background-color: #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+#header3-table-index {
+    width: 100%;
+    background-color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.table-checkbox {
+    width: 100%;
+    height: 90%;
+    font-size: 20px;
+    list-style-type: none;
+    padding: 0;
+    overflow: scroll;
+    border-collapse: collapse;
+}
+
+.table-checkbox thead tr {
+    display: table-row;
+    border-spacing: 0px;
+}
+
+.table-checkbox tbody tr {
+    justify-content: center;
+    text-align: center;
+    height: 43px;
+}
+
+.table-checkbox tbody tr:nth-child(odd) {
+    background-color:#94a3b8;
+}
+
+.table-checkbox tr th {
+    width: 100px;
+    background-color: #64748b;
+}
+
+#date-header {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+#member-list-index {
+    width: 100%;
+    height: 750px;
+    background-color: #cbd5e1;
+    overflow: auto;
+}
+
+#buttons-row-index {
+    width: 100%;
+    height: auto;
+}
+
+.buttons button {
+    float: right;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+#cancel {
+    background-color: #334155;
+    color: #e2e8f0;
+    font-size: 20px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border-color: #475569;
+}
+
+#save {
+    background-color: #334155;
+    color: #e2e8f0;
+    font-size: 20px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border-color: #475569;
+}
+
+.popup-index {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.popup-content-index {
+    background-color: #94a3b8;
+    margin: auto;
+    width: 30%;
+    height: 300px;
+    margin-top: 240px;
+}
+
+#popup-content-header-index {
+    width: 100%;
+    height: 30px;
+    background-color: #cbd5e1;
+}
+
+#popup-content-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+#popup-content-ok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-content-ok button {
+    background-color: #475569;
+    margin-left: 10px;
+    color: #e2e8f0;
+    font-size: 20px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border-color: #475569;
+}
+
+#popup-content-text-cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 60px;
+}
+
+#popup-content-ok-cancel {
+    width: 100%;
+}
+
+#popup-content-ok-cancel button {
+    background-color: #475569;
+    color: #e2e8f0;
+    font-size: 20px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border-color: #475569;
+}
+
+#ok-cancel-no {
+    float: left;
+    margin-left: 10px;
+}
+
+#ok-cancel-yes {
+    float: right;
+    margin-right: 10px;
+}
