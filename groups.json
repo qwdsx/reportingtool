@@ -1,37 +1,32 @@
 {
-    "groups": {
-        "group1": [
-            {
+    "groups": [
+        {
+            "name": "Football group",
+            "members": [
+                {
                     "name": "mark"
-                
-            },
-            {
-               
+                },
+                {
                     "name": "jack"
-                
-            },
-            {
-               
-                    "name": "john"
-                
-            }
-        ],
-        "group2": [
-            {
-                "member1": {
-                    "name": "mark"
-                }
-            },
-            {
-                "member2": {
-                    "name": "jack"
-                }
-            },
-            {
-                "member3": {
+                },
+                {
                     "name": "john"
                 }
-            }
-        ]
-    }
+            ]
+        },
+        {
+            "name": "Baseball group",
+            "members": [
+                {
+                    "name": "stacy"
+                },
+                {
+                    "name": "lisa"
+                },
+                {
+                    "name": "alice"
+                }
+            ]
+        }
+    ]
 }
