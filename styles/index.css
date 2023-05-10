@@ -127,6 +127,7 @@
 #buttons-row-index {
     width: 100%;
     height: auto;
+    display: none;
 }
 
 .buttons button {

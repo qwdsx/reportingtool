@@ -55,7 +55,7 @@ function appendDataToArchive(data) {
 
     list.childNodes.forEach((item) => {
         item.addEventListener('click', () => {
-
+            document.getElementById('buttons-row-index').style.display = "block";
             list.childNodes.forEach((item2) => {
                 if (item2.style === undefined) return;
                 item2.style.backgroundColor = "transparent";
