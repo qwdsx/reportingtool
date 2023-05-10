@@ -62,7 +62,6 @@ function appendDataToArchive(data) {
             document.getElementById('table-main-archive').style.display = "flex";
         })
     })
-    
 }
 
 document.querySelectorAll('.month-block').forEach((item) => {

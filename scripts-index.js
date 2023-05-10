@@ -40,7 +40,6 @@ document.getElementById('cancel').onclick = () => {
 async function fetchMemberData() {
     const res = await fetch("https://raw.githubusercontent.com/qwdsx/reportingtool/main/groups.json");
     const memberData = await res.json();
-    console.log(memberData);
     appendDataToArchive(memberData);
 }
 
@@ -56,7 +55,6 @@ function appendDataToArchive(data) {
 
     list.childNodes.forEach((item) => {
         item.addEventListener('click', () => {
-            console.log("test")
 
             list.childNodes.forEach((item2) => {
                 if (item2.style === undefined) return;
@@ -77,29 +75,35 @@ function appendDataToArchive(data) {
                 let tr = document.createElement('tr');
                 tr.innerHTML = findCorrectGroup.members[i].name;
 
+                let tdsl = document.createElement('td');
+                let inputsl = document.createElement('input');
+                inputsl.setAttribute('class', 'selectall');
+                inputsl.setAttribute('type', 'checkbox');
+                inputsl.setAttribute('name', 'selectall');
+                tdsl.appendChild(inputsl);
+                tr.appendChild(tdsl);
+
+                inputsl.addEventListener('click', () => {
+                    document.getElementsByName(findCorrectGroup.members[i].name).forEach((item) => {
+                        if (item.checked === false && inputsl.checked == true) {
+                            item.checked = true;
+                        } else {
+                            item.checked = false;
+                        }
+                    })
+                })
+
                 for (let j = 0; j < 7; j++) {
                     let td = document.createElement('td');
                     let input = document.createElement('input');
                     input.setAttribute('type', 'checkbox');
+                    input.setAttribute('name', findCorrectGroup.members[i].name);
                     td.appendChild(input);
                     tr.appendChild(td);
                 }
 
                 list2.appendChild(tr);                
             }
-
-            // list2.childNodes.forEach((item) => {
-            //     item.addEventListener('click', () => {
-            //         list2.childNodes.forEach((item2) => {
-            //             if (item2.style === undefined) return;
-            //             item2.style.backgroundColor = "transparent";
-            //         })
-                    
-            //         item.style.backgroundColor = "#d1d5db";
-            //         member = item.innerHTML;
-            //         document.getElementById('month-archive').style.display = "block";
-            //     })
-            // })
 
             document.getElementById('header1-table-index').getElementsByTagName('h1')[0].innerHTML = item.innerHTML;
             document.getElementById('checkbox-table').style.display = "block";
