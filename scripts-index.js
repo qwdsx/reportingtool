@@ -87,7 +87,7 @@ function appendDataToArchive(data) {
                     document.getElementsByName(findCorrectGroup.members[i].name).forEach((item) => {
                         if (item.checked === false && inputsl.checked == true) {
                             item.checked = true;
-                        } else {
+                        } else if (item.checked === true && inputsl.checked == false) {
                             item.checked = false;
                         }
                     })
