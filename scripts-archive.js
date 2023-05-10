@@ -8,22 +8,10 @@ let group = "";
 async function fetchMemberData() {
     const res = await fetch("https://raw.githubusercontent.com/qwdsx/reportingtool/main/groups.json");
     const memberData = await res.json();
-    appendMemberDataToArchive(memberData);
     appendDataToArchive(memberData);
 }
 
 fetchMemberData();
-
-function appendMemberDataToArchive(memberData) {
-    let list = document.getElementById('member-list-archive');
-    let li = document.createElement('li');
-    for (let i = 0; i < memberData.groups.length; i++) {
-        for (let j = 0; j < memberData.groups[i].members.length; j++) {
-            li.innerHTML = memberData.groups[i].members[j].name;
-            list.appendChild(li);
-        }
-    };
-};
 
 function appendDataToArchive(data) {
     let list = document.getElementById('group-list-archive');
@@ -35,6 +23,14 @@ function appendDataToArchive(data) {
 
     list.childNodes.forEach((item) => {
         item.addEventListener('click', () => {
+
+            list.childNodes.forEach((item2) => {
+                if (item2.style === undefined) return;
+                item2.style.backgroundColor = "transparent";
+            })
+            
+            item.style.backgroundColor = "#d1d5db";
+
             let list2 = document.getElementById('member-list-archive');
             
             while (list2.firstChild) {
@@ -51,6 +47,12 @@ function appendDataToArchive(data) {
 
             list2.childNodes.forEach((item) => {
                 item.addEventListener('click', () => {
+                    list2.childNodes.forEach((item2) => {
+                        if (item2.style === undefined) return;
+                        item2.style.backgroundColor = "transparent";
+                    })
+                    
+                    item.style.backgroundColor = "#d1d5db";
                     member = item.innerHTML;
                     document.getElementById('month-archive').style.display = "block";
                 })
@@ -79,12 +81,4 @@ window.onclick = (e) => {
     if (e.target == popup) {
         popup.style.display = "none";
     }
-}
-
-document.getElementById('save').onclick = () => {
-    popupSave.style.display = "block";
-}
-
-document.getElementById('cancel').onclick = () => {
-    popupCancel.style.display = "block";
 }
